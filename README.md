@@ -10,9 +10,13 @@ If you dont want to use the extension functions, you can just call `PersianHelpe
 
 Example usage:
 ```kotlin
-"123".toPersian() 
+"123".toPersian() // == "۱۲٣"
 
-"۱۲٣".toEnglish() 
+"۱۲٣".toEnglish() // == "123"
+
+PersianHelper.convertNumbersToEnglish("123") // == "۱۲٣"
+
+PersianHelper.convertNumbersToEnglish("۱۲٣") // == "123"
 ```
 
 ## Including in your project
