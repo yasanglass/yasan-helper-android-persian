@@ -2,34 +2,30 @@ package dev.yasan.helper.android.library
 
 object PersianHelper {
 
-    fun convertNumbersToEnglish(string: String): String {
-        var s = string
-        s = s.replace("۰", "0")
-        s = s.replace("۱", "1")
-        s = s.replace("۲", "2")
-        s = s.replace("٣", "3")
-        s = s.replace("٤", "4")
-        s = s.replace("۵", "5")
-        s = s.replace("٦", "6")
-        s = s.replace("٧", "7")
-        s = s.replace("۸", "8")
-        s = s.replace("۹", "9")
-        return s
+    fun convertNumbersToEnglish(string: String): String = string.apply {
+        replace("۰", "0")
+        replace("۱", "1")
+        replace("۲", "2")
+        replace("٣", "3")
+        replace("٤", "4")
+        replace("۵", "5")
+        replace("٦", "6")
+        replace("٧", "7")
+        replace("۸", "8")
+        replace("۹", "9")
     }
 
-    fun convertNumbersToPersian(string: String): String {
-        var s = string
-        s = s.replace("0", "۰")
-        s = s.replace("1", "۱")
-        s = s.replace("2", "۲")
-        s = s.replace("3", "٣")
-        s = s.replace("4", "٤")
-        s = s.replace("5", "۵")
-        s = s.replace("6", "٦")
-        s = s.replace("7", "٧")
-        s = s.replace("8", "۸")
-        s = s.replace("9", "۹")
-        return s
+    fun convertNumbersToPersian(string: String): String = string.apply {
+        replace("0", "۰")
+        replace("1", "۱")
+        replace("2", "۲")
+        replace("3", "٣")
+        replace("4", "٤")
+        replace("5", "۵")
+        replace("6", "٦")
+        replace("7", "٧")
+        replace("8", "۸")
+        replace("9", "۹")
     }
 
 }
