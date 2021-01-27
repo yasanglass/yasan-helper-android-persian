@@ -4,14 +4,14 @@
 A really light & simple Android library with just two functions & two extension functions to help you convert English numbers in strings into Persian numbers and vice versa. I have plans to add more helpful features soon.
 
 ## Usage
-Usage with extension functions:
+With extension functions:
 ```kotlin
 "123".toPersian() // == "۱۲٣"
 
 "۱۲٣".toEnglish() // == "123"
 ```
 
-Usage without extension functions:
+Without extension functions:
 ```kotlin
 PersianHelper.convertNumbersToEnglish("123") // == "۱۲٣"
 
@@ -36,7 +36,7 @@ dependencies {
 }
 ```
 
-You can also use '-SNAPSHOT' to get the snapshot builds.
+You can also use '{branch name}-SNAPSHOT' to get the snapshot builds.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
