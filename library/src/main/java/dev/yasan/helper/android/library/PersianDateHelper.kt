@@ -35,7 +35,12 @@ class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
         date.day
     )
 
-    fun toGeorgian() = Date(year, month, day)
+    fun toGeorgianDate(): Date {
+        val gDate = DateConverter.jalaliToGregorian(year, month, day)
+        return Date(gDate[0], gDate[1], gDate[2])
+    }
+
+    fun toDate() = Date(year, month, day)
 
 }
 
