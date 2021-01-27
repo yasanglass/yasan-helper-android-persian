@@ -1,9 +1,20 @@
 package dev.yasan.helper.android.library
 
+import android.content.Context
 import java.util.*
 
 //TODO replace the deprecated Date class usage
 class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
+
+    enum class DAY(name: String) {
+        SUNDAY("یکشنبه"),
+        MONDAY("دوشنبه"),
+        TUESDAY("سه شنبه"),
+        WEDNESDAY("چهارشنبه"),
+        THURSDAY("پنجشنبه"),
+        FRIDAY("جمعه"),
+        SATURDAY("شنبه")
+    }
 
     var year: Int
     var month: Int
@@ -42,7 +53,26 @@ class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
 
     fun toDate() = Date(year, month, day)
 
+    companion object {
+
+        fun getCurrentPersianDayName(): String = PersianDate.dayOfWeekToPersianName(Calendar.getInstance()[Calendar.DAY_OF_WEEK])
+
+        fun dayOfWeekToPersianName(day: Int): String {
+            return when (day) {
+                Calendar.SUNDAY -> DAY.SUNDAY.name
+                Calendar.MONDAY -> DAY.MONDAY.name
+                Calendar.TUESDAY -> DAY.TUESDAY.name
+                Calendar.WEDNESDAY -> DAY.WEDNESDAY.name
+                Calendar.THURSDAY -> DAY.THURSDAY.name
+                Calendar.FRIDAY -> DAY.FRIDAY.name
+                else -> DAY.SATURDAY.name
+            }
+        }
+
+    }
+
 }
+
 
 fun Date.toPersian() = PersianDate(this)
 
