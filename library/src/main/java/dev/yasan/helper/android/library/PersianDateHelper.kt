@@ -12,7 +12,7 @@ class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
     init {
         if (_year == null || _month == null || _day == null) {
             val gDate = Date()
-            val jDate = PersianDateConverter.gregorianToJalali(
+            val jDate = DateConverter.gregorianToJalali(
                 gDate.year,
                 gDate.month,
                 gDate.day
@@ -41,7 +41,7 @@ class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
 
 fun Date.toPersian() = PersianDate(this)
 
-private object PersianDateConverter {
+private object DateConverter {
 
     /**  Gregorian & Jalali (Hijri_Shamsi,Solar) Date Converter Functions
     Author: JDF.SCR.IR =>> Download Full Version :  http://jdf.scr.ir/jdf
