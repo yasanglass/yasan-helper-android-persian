@@ -4,16 +4,15 @@
 A really light & simple Android library with just two functions & two extension functions to help you convert English numbers in strings into Persian numbers and vice versa. I have plans to add more helpful features soon.
 
 ## Usage
-You can simply just call `toPersian()` or `toEnglish()` on any string and it will convert the numbers in the string.
-
-If you dont want to use the extension functions, you can just call `PersianHelper` object and use its `convertNumbersToEnglish(string: String)` & `convertNumbersToPersian(string: String)` functions.
-
-Example usage:
+Usage with extension functions:
 ```kotlin
 "123".toPersian() // == "۱۲٣"
 
 "۱۲٣".toEnglish() // == "123"
+```
 
+Usage without extension functions:
+```kotlin
 PersianHelper.convertNumbersToEnglish("123") // == "۱۲٣"
 
 PersianHelper.convertNumbersToEnglish("۱۲٣") // == "123"
