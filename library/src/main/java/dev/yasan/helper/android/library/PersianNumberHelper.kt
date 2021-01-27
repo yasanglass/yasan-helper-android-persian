@@ -1,9 +1,6 @@
 package dev.yasan.helper.android.library
 
-import android.app.Activity
-import android.view.View
-
-object PersianHelper {
+object PersianNumberHelper {
 
     fun convertNumbersToEnglish(string: String): String = string.apply {
         replace("۰", "0")
@@ -31,12 +28,7 @@ object PersianHelper {
         replace("9", "۹")
     }
 
-    fun forceRTL(activity: Activity) { activity.window.decorView.layoutDirection = View.LAYOUT_DIRECTION_RTL }
-    fun forceLTR(activity: Activity) { activity.window.decorView.layoutDirection = View.LAYOUT_DIRECTION_LTR }
-
 }
 
-fun String.toPersian() = PersianHelper.convertNumbersToPersian(this)
-fun String.toEnglish() = PersianHelper.convertNumbersToEnglish(this)
-fun Activity.forceRTL() = PersianHelper.forceRTL(this)
-fun Activity.forceLTR() = PersianHelper.forceLTR(this)
+fun String.toPersian() = PersianNumberHelper.convertNumbersToPersian(this)
+fun String.toEnglish() = PersianNumberHelper.convertNumbersToEnglish(this)
