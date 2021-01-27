@@ -83,24 +83,24 @@ private object DateConverter {
     }
 
     fun jalaliToGregorian(jYear: Int, jMonth: Int, jDay: Int): IntArray {
-        var jy1: Int = jYear + 1595
+        val jy1: Int = jYear + 1595
         var days: Int =
-            -355668 + (365 * jy1) + ((jy1 / 33).toInt() * 8) + (((jy1 % 33) + 3) / 4).toInt() + jDay + (if (jMonth < 7) ((jMonth - 1) * 31) else (((jMonth - 7) * 30) + 186))
-        var gy: Int = 400 * (days / 146097).toInt()
+            -355668 + (365 * jy1) + ((jy1 / 33) * 8) + (((jy1 % 33) + 3) / 4) + jDay + (if (jMonth < 7) ((jMonth - 1) * 31) else (((jMonth - 7) * 30) + 186))
+        var gy: Int = 400 * (days / 146097)
         days %= 146097
         if (days > 36524) {
-            gy += 100 * (--days / 36524).toInt()
+            gy += 100 * (--days / 36524)
             days %= 36524
             if (days >= 365) days++
         }
-        gy += 4 * (days / 1461).toInt()
+        gy += 4 * (days / 1461)
         days %= 1461
         if (days > 365) {
-            gy += ((days - 1) / 365).toInt()
+            gy += ((days - 1) / 365)
             days = (days - 1) % 365
         }
         var gd: Int = days + 1
-        var sal_a: IntArray = intArrayOf(
+        val sal_a: IntArray = intArrayOf(
             0,
             31,
             if ((gy % 4 == 0 && gy % 100 != 0) || (gy % 400 == 0)) 29 else 28,
