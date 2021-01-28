@@ -72,7 +72,7 @@ dependencies {
 }
 ```
 
-You can also use '{branch name}-SNAPSHOT' to get the snapshot builds.
+You can also use `{branch name}-SNAPSHOT` to get the snapshot builds.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
