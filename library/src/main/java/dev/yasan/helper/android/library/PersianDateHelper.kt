@@ -37,24 +37,24 @@ class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
         }
     }
 
-    override fun toString(): String = "PersianDate[$year/$month/$day]"
+    constructor(date: Date) : this(0, 0, 0) {
+        val persianDateIntArray = DateConverter.gregorianToJalali(date.year, date.month, date.day)
+        year = persianDateIntArray[0]
+        month = persianDateIntArray[1]
+        day = persianDateIntArray[2]
+    }
 
-    constructor(date: Date) : this(
-        date.year,
-        date.month,
-        date.day
-    )
+    override fun toString(): String = "PersianDate[y$year/m$month/d$day]"
 
     fun toGeorgianDate(): Date {
         val gDate = DateConverter.jalaliToGregorian(year, month, day)
         return Date(gDate[0], gDate[1], gDate[2])
     }
 
-    fun toDate() = Date(year, month, day)
-
     companion object {
 
-        fun getCurrentPersianDayName(): String = PersianDate.dayOfWeekToPersianName(Calendar.getInstance()[Calendar.DAY_OF_WEEK])
+        fun getCurrentPersianDayName(): String =
+            dayOfWeekToPersianName(Calendar.getInstance()[Calendar.DAY_OF_WEEK])
 
         fun dayOfWeekToPersianName(day: Int): String {
             return when (day) {
@@ -71,7 +71,6 @@ class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
     }
 
 }
-
 
 fun Date.toPersian() = PersianDate(this)
 
