@@ -4,18 +4,54 @@
 A really light & simple Android library with just two functions & two extension functions to help you convert English numbers in strings into Persian numbers and vice versa. I have plans to add more helpful features soon.
 
 ## Usage
-With extension functions:
+Persian Number Helper:
 ```kotlin
 "123".toPersian() // == "۱۲٣"
 
 "۱۲٣".toEnglish() // == "123"
-```
 
-Without extension functions:
-```kotlin
 PersianHelper.convertNumbersToEnglish("123") // == "۱۲٣"
 
 PersianHelper.convertNumbersToEnglish("۱۲٣") // == "123"
+```
+
+Persian View Helper:
+```kotlin
+activity.forceRTL() 
+
+activity.forceLTR() 
+
+PersianViewHelper.forceRTL(activity)
+
+PersianViewHelper.forceLTR(activity)
+```
+
+Persian Date Helper:
+```kotlin
+// Any of the parameters that you dont send default to the current date
+
+val persianDate = PersianDate(_year, _month, _day)
+
+val persianDate = PersianDate(_year = 1, _day = 2)
+
+val persianDate = PersianDate() // == Current date
+
+// Create a PersianDate object using a Date object
+
+val persianDate = Date.toPersian() 
+
+val persianDate = PersianDate(date) 
+
+// Create a Date (Georgian) object from a PersianDate obejct
+
+val date: Date = persianDate.toGeorgianDate() 
+
+// Get Persian week day names
+
+val persianDayName = PersianDate.getCurrentPersianDayName()
+
+val persianDayName = PersianDate.dayOfWeekToPersianName(day: Int) //day == Calendar.SATURDAY...
+
 ```
 
 ## Including in your project
