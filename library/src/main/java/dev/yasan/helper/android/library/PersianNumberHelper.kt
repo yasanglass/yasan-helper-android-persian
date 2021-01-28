@@ -32,3 +32,5 @@ object PersianNumberHelper {
 
 fun String.toPersian() = PersianNumberHelper.convertNumbersToPersian(this)
 fun String.toEnglish() = PersianNumberHelper.convertNumbersToEnglish(this)
+
+fun Int.toStringPersian() = PersianNumberHelper.convertNumbersToPersian(this.toString())
