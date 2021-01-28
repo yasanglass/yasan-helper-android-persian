@@ -6,13 +6,14 @@ import java.util.*
 class PersianDate(_year: Int? = null, _month: Int? = null, _day: Int? = null) {
 
     enum class DAY(name: String) {
+        SATURDAY("شنبه"),
         SUNDAY("یکشنبه"),
         MONDAY("دوشنبه"),
         TUESDAY("سه شنبه"),
         WEDNESDAY("چهارشنبه"),
         THURSDAY("پنجشنبه"),
-        FRIDAY("جمعه"),
-        SATURDAY("شنبه")
+        FRIDAY("جمعه")
+    }
     }
 
     var year: Int
