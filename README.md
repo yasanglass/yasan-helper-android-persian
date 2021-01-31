@@ -26,34 +26,6 @@ PersianViewHelper.forceRTL(activity)
 PersianViewHelper.forceLTR(activity)
 ```
 
-Persian Date Helper:
-```kotlin
-// Any of the parameters that you dont send default to the current date
-
-val persianDate = PersianDate(_year, _month, _day)
-
-val persianDate = PersianDate(_year = 1, _day = 2)
-
-val persianDate = PersianDate() // == Current date
-
-// Create a PersianDate object using a Date object
-
-val persianDate = Date.toPersian() 
-
-val persianDate = PersianDate(date) 
-
-// Create a Date (Georgian) object from a PersianDate obejct
-
-val date: Date = persianDate.toGeorgianDate() 
-
-// Get Persian week day names
-
-val persianDayName = PersianDate.getCurrentPersianDayName()
-
-val persianDayName = PersianDate.dayOfWeekToPersianName(day: Int) //day == Calendar.SATURDAY...
-
-```
-
 ## Including in your project
 This library is available via JitPack, so getting it as simple as adding it as a dependency, like this:
 
