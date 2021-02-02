@@ -1,5 +1,5 @@
 # YASAN Helper: Android Persian
-[![](https://jitpack.io/v/yasandev/yasan-helper-android-persian.svg)](https://jitpack.io/#yasandev/yasan-helper-android-persian) [![Build Status](https://travis-ci.com/yasandev/yasan-helper-android-persian.svg?branch=main)](https://travis-ci.com/yasandev/yasan-helper-android-persian)
+[![](https://jitpack.io/v/yasandev/yasan-helper-android-persian.svg)](https://jitpack.io/#yasandev/yasan-helper-android-persian) [![Build Status](https://travis-ci.com/yasandev/yasan-helper-android-persian.svg?branch=main)](https://travis-ci.com/yasandev/yasan-helper-android-persian) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6ccea925d07d44d380a623a10e38ad0a)](https://www.codacy.com/gh/yasandev/yasan-helper-android-persian/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yasandev/yasan-helper-android-persian&amp;utm_campaign=Badge_Grade)
 
 A really light & simple Android library with just two functions & two extension functions to help you convert English numbers in strings into Persian numbers and vice versa. I have plans to add more helpful features soon.
 
