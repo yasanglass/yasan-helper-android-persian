@@ -3,6 +3,9 @@ package dev.yasan.helper.android.library
 import android.app.Activity
 import android.view.View
 
+/**
+ * A helper class with a set of functions that help with view related difficulties in Persian Android applications.
+ */
 object PersianViewHelper {
 
     /**
