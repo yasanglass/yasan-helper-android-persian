@@ -2,6 +2,7 @@ package dev.yasan.helper.android.library
 
 /**
  * A helper class with a set of functions that help with numeric difficulties in Persian Android applications.
+ * @author Yasan Ghafariyan
  */
 object PersianNumberHelper {
 

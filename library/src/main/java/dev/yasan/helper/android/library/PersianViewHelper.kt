@@ -5,16 +5,19 @@ import android.view.View
 
 /**
  * A helper class with a set of functions that help with view related difficulties in Persian Android applications.
+ * @author Yasan Ghafariyan
  */
 object PersianViewHelper {
 
     /**
      * Sets the activity's layout direction to right-to-left
+     * @author Yasan Ghafariyan
      */
     fun forceRTL(activity: Activity) { activity.window.decorView.layoutDirection = View.LAYOUT_DIRECTION_RTL }
 
     /**
      * Sets the activity's layout direction to left-to-right
+     * @author Yasan Ghafariyan
      */
     fun forceLTR(activity: Activity) { activity.window.decorView.layoutDirection = View.LAYOUT_DIRECTION_LTR }
 
@@ -22,10 +25,12 @@ object PersianViewHelper {
 
 /**
  * Sets the activity's layout direction to right-to-left
+ * @author Yasan Ghafariyan
  */
 fun Activity.forceRTL() = PersianViewHelper.forceRTL(this)
 
 /**
  * Sets the activity's layout direction to left-to-right
+ * @author Yasan Ghafariyan
  */
 fun Activity.forceLTR() = PersianViewHelper.forceLTR(this)
