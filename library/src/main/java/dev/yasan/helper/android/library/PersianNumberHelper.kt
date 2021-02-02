@@ -2,6 +2,12 @@ package dev.yasan.helper.android.library
 
 object PersianNumberHelper {
 
+    /**
+     * Converts all the Persian numeric characters in the String into the English ones.
+     * @param string any string that contains English numeric characters
+     * @return the converted String
+     * @author Yasan Ghafariyan
+     */
     fun convertNumbersToEnglish(string: String): String = string.apply {
         replace("۰", "0")
         replace("۱", "1")
@@ -15,6 +21,12 @@ object PersianNumberHelper {
         replace("۹", "9")
     }
 
+    /**
+     * Converts all the English numeric characters in the String into the Persian ones.
+     * @param string any string that contains Persian numeric characters
+     * @return the converted String
+     * @author Yasan Ghafariyan
+     */
     fun convertNumbersToPersian(string: String): String = string.apply {
         replace("0", "۰")
         replace("1", "۱")
@@ -30,7 +42,24 @@ object PersianNumberHelper {
 
 }
 
+/**
+ * Converts all the English numeric characters in the String into the Persian ones.
+ * @return the converted String
+ * @author Yasan Ghafariyan
+ */
 fun String.toPersian() = PersianNumberHelper.convertNumbersToPersian(this)
+
+/**
+ * Converts all the Persian numeric characters in the String into the English ones.
+ * @return the converted String
+ * @author Yasan Ghafariyan
+ */
 fun String.toEnglish() = PersianNumberHelper.convertNumbersToEnglish(this)
 
+/**
+ * Converts the Int into a String with Persian numeric characters.
+ * @return the converted String
+ * @see String.toPersian
+ * @author Yasan Ghafariyan
+ */
 fun Int.toStringPersian() = PersianNumberHelper.convertNumbersToPersian(this.toString())
