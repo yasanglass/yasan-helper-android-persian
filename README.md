@@ -17,13 +17,13 @@ PersianHelper.convertNumbersToEnglish("۱۲٣") // == "123"
 
 Persian View Helper:
 ```kotlin
-activity.forceRTL() 
+activity/view.forceRTL() 
 
-activity.forceLTR() 
+activity/view.forceLTR() 
 
-PersianViewHelper.forceRTL(activity)
+PersianViewHelper.forceRTL(activity/view)
 
-PersianViewHelper.forceLTR(activity)
+PersianViewHelper.forceLTR(activity/view)
 ```
 
 ## Including in your project
@@ -48,6 +48,3 @@ You can also use `{branch name}-SNAPSHOT` to get the snapshot builds.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.txt)
