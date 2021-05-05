@@ -17,13 +17,24 @@ PersianHelper.convertNumbersToEnglish("۱۲٣") // == "123"
 
 Persian View Helper:
 ```kotlin
-activity/view.forceRTL() 
+Activity/View.forceRTL() 
 
-activity/view.forceLTR() 
+Activity/View.forceLTR() 
 
-PersianViewHelper.forceRTL(activity/view)
+PersianViewHelper.forceRTL(Activity/View)
 
-PersianViewHelper.forceLTR(activity/view)
+PersianViewHelper.forceLTR(Activity/View)
+```
+
+Persian Validation Helper:
+```kotlin
+String.isPersianPhoneNumber() 
+
+String.isPersianNationalCode() 
+
+PersianValidationHelper.isPersianPhoneNumber(String)
+
+PersianValidationHelper.isPersianNationalCode(String)
 ```
 
 ## Including in your project
